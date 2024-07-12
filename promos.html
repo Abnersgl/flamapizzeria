@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-eq="x-ua-compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="promos.css">
+    <script src="promos.js" defer></script>
+    <script src="promos_items.js"></script>
+	<title>Promos</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="carritoFun.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Flama Pizzeria</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="carta.html">Carta</a>
+            <a href="promos.html">Promos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contactos.html">Contactos</a>
+            <a href="carrito.html"><i class='bx bx-cart' id="shopping-icon"><span id="count">0</span></i></a>
+        </nav>
+    </header>
+
+	<h1>Nuestras Promociones</h1>
+	
+	<section id="grid-container">
+
+		<div class="grid-item">
+			<a href="#pasta"> <img src="images/pasta.jpg" alt="Pastas">
+		    <div class="overlay">Pastas</div></a>
+		</div>
+
+		<div class="grid-item">
+		  <a href="#vinos">  <img src="images/vino.jpg" alt="Vinos">
+		    <div class="overlay">Vinos</div></a>
+		</div>
+
+		<div class="grid-item">
+		    <a href="#pizza"> <img src="images/pizza.jpg" alt="Pizzas">
+		    <div class="overlay">Pizzas</div></a>
+		</div>
+
+		<div class="grid-item">
+		    <a href="#bebida"> <img src="images/bebida.jpg" alt="Bebidas">
+		    <div class="overlay">Bebidas</div></a> 
+		</div>
+
+	</section>
+
+
+    <section class="product-list" id="container-products">
+        <h2> PROMOCIONES PASTAS</h2>
+	    <div class="menu-container" id="pasta">
+        </div>
+        <h2> PROMOCIONES VINOS </h2>
+	    <div class="menu-container" id="vinos">
+        </div>
+        <h2>PROMOCIONES PIZZAS</h2>
+	    <div class="menu-container" id="pizza">
+        </div>
+        <h2>PROMOCIONES BEBIDAS</h2>
+	    <div class="menu-container" id="bebida">
+        </div>
+
+    </section>
+
+	
+
+    <footer class="Footer">
+        <div class="footer-content">
+            <img src="images/logo-flama.png" alt="logo">
+            <p>
+                VEN A PROBAR LA VERACE PIZZA NAPOLETANA
+            </p>
+                
+                <a href="https://www.facebook.com/people/FLAMA-Pizzería/100063999702450/" class="btn" target="_blank">
+                    <i class='bx bxl-facebook-circle' ></i></a>
+
+                <a href="https://www.instagram.com/flamapizzeria/?fbclid=IwZXh0bgNhZW0CMTAAAR3R7QzyHj7S0yU52XN51AzTG-ch_SbRIY30oHQM1ipW316aHgfbpdU1I9k_aem_Ad1elohOApMp4cPOuDh2TBZgCZKLWxOvvuy1osjxgNDM4ARnQDZ_-o7vf-mqJbjMUq4GOLuJTjjMKv1uZO3GDSEh" class="btn" target="_blank">
+                    <i class='bx bxl-instagram-alt' ></i></a>
+
+        </div>
+
+        <div class="footer-content">
+            <h4>Telefono</h4>
+            <li>+51 914 201 951 / (01) 440-3636</li>
+            <li>+51 951 958 691 / (01) 450-5858</li>
+        </div>
+
+        <div class="footer-content">
+            <h4>Articulos Periodicos</h4>
+            <li><a href="https://elcomercio.pe/somos/estilo/flama-una-acogedora-pizzeria-de-esencia-napolitana-en-miraflores-pizzas-en-lima-gastronomia-pastas-restaurante-comida-italiana-historias-ec-noticia/" class="btn" target="_blank">La Republica</a></li>
+            <li><a href="https://larepublica.pe/gastronomia/2023/06/03/donde-queda-flama-el-unico-restaurante-peruano-que-ofrece-la-verdadera-pizza-napolitana-miraflores-recomendaciones-cerca-de-ti-atmp-238683" class="btn" target="_blank">El Comercio</a></li>
+            
+        </div>
+
+        <div class="footer-content">
+            <h4>Horarios</h4>
+            <li> Mar - Jue: 12:00 - 10:00 p. m. </li>
+            <li> Vie - Sab: 12:00 - 11:00 p. m.  </li>
+            <li> Domingo: 12:00 - 6:30 p. m.  </li>
+        </div>
+
+    </footer>
+</body>
+</html>

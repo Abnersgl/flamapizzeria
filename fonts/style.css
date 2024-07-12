@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mollen';
+    src: local('Mollen Semi Light'), local('Mollen-Semi-Light'),
+        url('Mollen-SemiLight.woff2') format('woff2'),
+        url('Mollen-SemiLight.woff') format('woff'),
+        url('Mollen-SemiLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }

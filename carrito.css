@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' ;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body{
+    background: #fefefe;
+    position: relative;
+    min-height: 150vh;
+  }
+  
+  /*Diseño para la barra de navegacion*/
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    background: #AB2A3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .logo{
+    font-size: 1.3rem;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .navbar a{
+    font-size: 1rem;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+  }
+  
+  a {
+    display: inline-block;
+    position: relative;
+  }
+  a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    transition: all .4s;
+  }
+  
+  .navbar a:hover:after {
+    width: 100%;
+    background: #FD5E53;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  .icons{
+     position: absolute;
+     right: 5%;
+     font-size: 2.8rem;
+     color: #fefefe;
+     cursor: pointer;
+     display: none;
+  }
+  
+  #count{
+    background-color: #FD5E53;
+    border-radius: 100%;
+    display: inline-block;
+    width: 22px;
+    line-height: 20px;
+    aspect-ratio: 1;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+  }
+  
+     /*Responsividad de la barra de navegacion*/
+  @media (max-width: 992px){
+     .header{
+        padding: 1.3rem 5%;
+     }
+  }
+     /*Despliegue del menu hamburguesa*/
+  @media (max-width: 960px){
+     .icons{
+        display: inline-flex;
+     }
+     #check:checked~.icons #menu-icon{
+        display: none;
+     }
+  
+     .icons #close-icon{
+       display: none;
+     }
+     #check:checked~.icons #close-icon{
+       display: block;
+     }
+     .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #AB2A3E;
+        overflow: hidden;
+        transition: .3s ease;
+       
+     }
+     .navbar a:hover:after {
+       width: 50px;
+       background: #FD5E53;
+    }
+     #check:checked~.navbar{
+       height: 18.5rem;
+     }
+     .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+     }
+     
+  }
+  
+  @media (max-width: 643px){
+    .content{
+      padding-top: 250px;
+    }
+  }
+  
+
+
+/*CSS para los productos del carrito*/
+#container-products{
+    margin: auto;
+    margin-top: 100px;
+    width: 500px;
+}
+.product{
+    display: flex;
+    gap: 20px;
+    width: 450px;
+    border-radius: 15px;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 16px;
+}
+.product img{
+    height: 100%;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: 1.5;
+}
+.product span.titulo {
+    max-width: 100px;
+}
+/*Botones de + y - para agregar o quitar un mismo producto*/
+.btn-js {
+  
+  font-size: 1.2em; /* Incrementa el tamaño de la fuente para hacer el botón más grande */
+  padding: 5px; /* Aumenta el relleno para agrandar el botón */
+  border-radius: 4px; /* Radio de borde del 20% */
+  border: none; /* Elimina cualquier borde predeterminado */
+  background-color: #ab2a3e; /* Color de fondo (puedes cambiarlo según tu preferencia) */
+  color: white; /* Color del texto */
+  cursor: pointer; /* Cursor en forma de mano para indicar que es un botón clicable */
+}
+
+.btn-js:hover {
+  background-color: #922e3d; /* Color de fondo cuando se pasa el mouse por encima (hover) */
+}
+/**/
+.btn-carrito {
+  
+  font-size: 1.2em; /* Incrementa el tamaño de la fuente para hacer el botón más grande */
+  padding: 10px 10px; /* Aumenta el relleno para agrandar el botón */
+  border-radius: 10px; /* Radio de borde del 20% */
+  border: none; /* Elimina cualquier borde predeterminado */
+  background-color: #ab2a3e; /* Color de fondo (puedes cambiarlo según tu preferencia) */
+  color: white; /* Color del texto */
+  cursor: pointer; /* Cursor en forma de mano para indicar que es un botón clicable */
+}
+
+.btn-carrito:hover {
+  background-color: #922e3d; /* Color de fondo cuando se pasa el mouse por encima (hover) */
+}
+
+#resumen{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+  text-align: center;
+  margin-bottom: 500px;
+}
+
+
+#resumen .btn-carrito{
+    text-align: center;
+    display: block;
+    width: auto; /* Hacer que los botones ocupen el 100% del ancho del contenedor padre */
+    margin: 10px 0; /* Espacio entre los botones */
+}
+#carrito-vacio{
+    text-align: center;
+}
+
+.escondido{
+    display: none;
+}
+
+@media (max-width: 508px){
+    .product{
+        gap: 15px;
+        width: 400px;
+    }   
+}
+  
+
+
+/*Footer*/
+
+.Footer{
+    margin-top: auto;
+    padding: 80px 13% 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    gap: 3.5rem;
+    background: #ab2a3e;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content img{
+    width: 60%;
+  }
+  
+  .footer-content h4{
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+  }
+  
+  .footer-content li{
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .footer-content li a{
+    display: block;
+    color: #d6d6d6;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+  }
+  
+  .footer-content li a:hover{
+    transform: translateY(-3px) translateX(-5px);
+    color: #fff;
+  }
+  
+  .footer-content p{
+    color: #d6d6d6;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 20px 0;
+  }
+  
+  
+  .footer-content a{
+    display: inline-block;
+    font-size: 22px;
+    color: #d6d6d6;
+    margin-right: 17px;
+    transition: all .40s ease;
+  }
+  
+  .footer-content a:hover{
+    color: #fff;
+    transform: translateY(-5px);
+  }
+  
+  @media (max-width: 1690px){
+    section Footer{
+        padding: 50px 5% 40px;
+    }
+  }
+  
+  @media (max-width: 1120px){
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        gap: 2rem;
+    }
+    body{
+        padding-bottom: 30em;
+    }
+  }
+  
+  @media (max-width: 890px){
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        gap: 2.5rem;
+  
+    }
+    body{
+        padding-bottom: 40em;
+    }
+  }
+  
+  
+  @media (max-width: 460px){
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+        gap: 1.8rem;
+        
+    }
+    body{
+        padding-bottom: 60em;
+    }
+  }
+  

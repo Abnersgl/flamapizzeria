@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' ;
+    text-decoration: none;
+    list-style: none;
+ }
+
+ body{
+   /*Imagen de fondo para la pantalla principal*/
+    background: url(images/banner.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+ }
+
+/*Diseño para la barra de navegacion*/
+ header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    background: #AB2A3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+ }
+
+ .logo{
+    font-size: 1.3rem;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 700;
+ }
+
+ .navbar a{
+    font-size: 1rem;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+ }
+
+a {
+   display: inline-block;
+   position: relative;
+}
+a:after {
+   content: "";
+   display: block;
+   margin: auto;
+   height: 2px;
+   width: 0px;
+   transition: all .4s;
+}
+
+.navbar a:hover:after {
+   width: 100%;
+   background: #FD5E53;
+}
+
+ #check{
+   display: none;
+ }
+
+ .icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fefefe;
+    cursor: pointer;
+    display: none;
+ }
+ #count{
+   background-color: #FD5E53;
+   border-radius: 100%;
+   display: inline-block;
+   width: 22px;
+   line-height: 20px;
+   aspect-ratio: 1;
+   font-size: 13px;
+   text-align: center;
+   position: absolute;
+ }
+
+   /*Responsividad de la barra de navegacion*/
+ @media (max-width: 992px){
+    .header{
+        padding: 1.3rem 5%;
+    }
+ }
+   /*Despliegue del menu hamburguesa*/
+ @media (max-width: 960px){
+    .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+      display: none;
+    }
+
+    .icons #close-icon{
+      display: none;
+    }
+    #check:checked~.icons #close-icon{
+      display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #AB2A3E;
+        overflow: hidden;
+        transition: .3s ease;
+      
+    }
+    .navbar a:hover:after {
+      width: 50px;
+      background: #FD5E53;
+   }
+    #check:checked~.navbar{
+      height: 18.5rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+    
+ }
+ @media (max-width: 643px){
+   .content{
+      padding-top: 300px;
+    }
+ }
+
+
+ /*Diseño de la seccion principal del index*/
+ section{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fefefe;
+ }
+section h1{
+    font-size: 50px;
+    margin-top: 80px;
+    padding: 20px;
+}
+section p{
+    font-size: 20px;
+    margin: 30px;
+    line-height: 25px;
+}
+
+ /*Diseño de los botones*/
+.buttons a{
+   width: 150px;
+   color: #fefefe;
+   font-size: 1rem;
+   padding: 15px 15px;
+   margin: 10px;
+   background: #AB2A3E;
+   border-radius: 15px;
+   text-decoration: none;
+}
+.buttons a:before{
+   content:"";
+   position: absolute;
+   border-radius: 15px;
+   top: 0px;
+   left: 0px;
+   width: 0px;
+   height: 100%;
+   background: rgba(255, 255, 255, 0.062);
+   transition: all 0.3s ease;
+}
+.buttons a:hover::before{
+   width: 100%;
+}
+

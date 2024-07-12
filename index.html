@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flama Pizzeria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="carritoFun.js" defer></script>
+    <!--Para el Stripe-->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="productos.js"></script>
+</head>
+<body>
+    <header>
+        <!--Titulo de la pagina web-->
+        <a href="index.html" class="logo">Flama Pizzeria</a>
+
+        <!--Menu de navegacion hamburguesa-->
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <!--Barra de navegacion de la pagina-->
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="carta.html">Carta</a>
+            <a href="promos.html">Promos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contactos.html">Contactos</a>
+            <a href="carrito.html"><i class='bx bx-cart' id="shopping-icon"><span id="count">0</span></i></a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!--Titulo y texto principal-->
+            <h1>Sumérgete en el mundo culinario napolitano</h1>
+            <p> Disfruta de nuestros exquisitos platos que reflejan la deliciosa <br>cultura y el cariño de Italia</p>
+            <!--Botones para ver la carta y contactar-->
+            <div class="buttons">
+                <a href="contactos.html">Reservas</a>
+                <a href="carta.html">Carta</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

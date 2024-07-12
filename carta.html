@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="carritoFun.js" defer></script>
+    <script src="productos.js"></script>
+    <script src="carta.js" defer></script>
+    <title>Carta</title>
+    <link rel="stylesheet" href="carta.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!--Titulo de la pagina web-->
+        <a href="index.html" class="logo">Flama Pizzeria</a>
+
+        <!--Menu de navegacion hamburguesa-->
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <!--Barra de navegacion de la pagina-->
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="carta.html">Carta</a>
+            <a href="promos.html">Promos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contactos.html">Contactos</a>
+            <a href="carrito.html"><i class='bx bx-cart' id="shopping-icon"><span id ="count">0</span></i></a>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <!-- contenedor para la barra de busqueda -->
+            <div class="search">
+                <h1>Nuestros Productos</h1>
+                <input type="text" name="buscar" id="find" placeholder="Ingresa el nombre..." onkeyup="search()">
+            </div>
+        </section>
+
+        <!-- contenedor para la carta de productos -->
+        <section class="product-list" id="container-products"></section>
+        
+
+    </main>
+    <footer class="Footer">
+        <div class="footer-content">
+            <img src="images/logo-flama.png" alt="logo">
+            <p>
+                VEN A PROBAR LA VERACE PIZZA NAPOLETANA
+            </p>
+            <a href="https://www.facebook.com/people/FLAMA-Pizzería/100063999702450/" class="btn" target="_blank">
+                <i class='bx bxl-facebook-circle'></i></a>
+
+            <a href="https://www.instagram.com/flamapizzeria/?fbclid=IwZXh0bgNhZW0CMTAAAR3R7QzyHj7S0yU52XN51AzTG-ch_SbRIY30oHQM1ipW316aHgfbpdU1I9k_aem_Ad1elohOApMp4cPOuDh2TBZgCZKLWxOvvuy1osjxgNDM4ARnQDZ_-o7vf-mqJbjMUq4GOLuJTjjMKv1uZO3GDSEh"
+                class="btn" target="_blank">
+                <i class='bx bxl-instagram-alt'></i></a>
+
+        </div>
+        <div class="footer-content">
+            <h4>Telefono</h4>
+            <ul>
+                <li>+51 914 201 951 / (01) 440-3636</li>
+                <li>+51 951 958 691 / (01) 450-5858</li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h4>Articulos Periodicos</h4>
+            <ul>
+                <li><a href="https://elcomercio.pe/somos/estilo/flama-una-acogedora-pizzeria-de-esencia-napolitana-en-miraflores-pizzas-en-lima-gastronomia-pastas-restaurante-comida-italiana-historias-ec-noticia/"
+                        class="btn" target="_blank">La Republica</a></li>
+                <li><a href="https://larepublica.pe/gastronomia/2023/06/03/donde-queda-flama-el-unico-restaurante-peruano-que-ofrece-la-verdadera-pizza-napolitana-miraflores-recomendaciones-cerca-de-ti-atmp-238683"
+                        class="btn" target="_blank">El Comercio</a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h4>Horarios</h4>
+            <ul>
+                <li> Mar - Jue: 12:00 - 10:00 p. m. </li>
+                <li> Vie - Sab: 12:00 - 11:00 p. m. </li>
+                <li> Domingo: 12:00 - 6:30 p. m. </li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
